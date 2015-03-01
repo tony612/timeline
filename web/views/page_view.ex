@@ -1,3 +1,3 @@
 defmodule Timeline.PageView do
-  use Timeline.View
+  use Timeline.Web, :view
 end

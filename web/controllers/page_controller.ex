@@ -1,5 +1,5 @@
 defmodule Timeline.PageController do
-  use Phoenix.Controller
+  use Timeline.Web, :controller
 
   plug :action
 

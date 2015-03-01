@@ -1,5 +1,5 @@
 defmodule Timeline.ErrorView do
-  use Timeline.View
+  use Timeline.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found - 404"

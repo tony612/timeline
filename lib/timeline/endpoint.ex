@@ -23,8 +23,8 @@ defmodule Timeline.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_timeline_key",
-    signing_salt: "iC563MD6",
-    encryption_salt: "OOCSzuo1"
+    signing_salt: "kZD3BXMw",
+    encryption_salt: "jTMWuQ6D"
 
   plug :router, Timeline.Router
 end

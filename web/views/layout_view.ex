@@ -1,3 +1,3 @@
 defmodule Timeline.LayoutView do
-  use Timeline.View
+  use Timeline.Web, :view
 end

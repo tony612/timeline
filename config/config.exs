@@ -8,10 +8,10 @@ use Mix.Config
 # Configures the endpoint
 config :timeline, Timeline.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "BJMUFcGeuKM0Lmq88DTKlCBA72A2w2Gm2AK7AhcHR728CF0Zm7miBEhpw/G+h1fx",
+  secret_key_base: "v0gSzO7+8ESCuoIS9Ps0lyiseCugZSRJK/76JI2qS0V1/1mbp9D2Yff7tDKUQJRW",
   debug_errors: false,
-  pubsub: [adapter: Phoenix.PubSub.PG2]
-
+  pubsub: [name: Timeline.PubSub,
+           adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
