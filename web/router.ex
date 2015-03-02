@@ -13,13 +13,14 @@ defmodule Timeline.Router do
   end
 
   scope "/", Timeline do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Timeline do
-  #   pipe_through :api
-  # end
+  scope "/api", Timeline do
+    pipe_through :api
+
+    get "/posts.json", PostsController, :index
+  end
 end
