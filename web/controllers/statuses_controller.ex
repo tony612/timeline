@@ -1,4 +1,4 @@
-defmodule Timeline.PostsController do
+defmodule Timeline.StatusesController do
   use Timeline.Web, :controller
 
   plug :action

@@ -25,6 +25,6 @@ defmodule Timeline.Mixfile do
     [{:phoenix, github: "phoenixframework/phoenix"},
      {:cowboy, "~> 1.0"},
      {:postgrex, "~> 0.8.0"},
-     {:ecto, "~> 0.8.1"}]
+     {:ecto, github: "elixir-lang/ecto"}]
   end
 end

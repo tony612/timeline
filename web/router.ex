@@ -21,6 +21,6 @@ defmodule Timeline.Router do
   scope "/api", Timeline do
     pipe_through :api
 
-    get "/posts.json", PostsController, :index
+    get "/statuses.json", StatusesController, :index
   end
 end
