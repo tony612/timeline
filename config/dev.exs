@@ -5,6 +5,13 @@ config :timeline, Timeline.Endpoint,
   debug_errors: true,
   cache_static_lookup: false
 
+
+config :timeline, Timeline.Repo,
+  database: "timeline_development",
+  username: "timeline",
+  password: nil,
+  hostname: "localhost"
+
 # Enables code reloading for development
 config :phoenix, :code_reloader, true
 
