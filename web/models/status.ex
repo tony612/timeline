@@ -3,5 +3,7 @@ defmodule Status do
 
   schema "statuses" do
     field :text, :string
+
+    timestamps
   end
 end
