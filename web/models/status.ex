@@ -1,4 +1,4 @@
-defmodule Status do
+defmodule Timeline.Status do
   use Ecto.Model
 
   schema "statuses" do

@@ -15,7 +15,7 @@ defmodule Timeline.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Timeline, []},
-     applications: [:phoenix, :cowboy, :logger, :ecto]]
+     applications: [:phoenix, :cowboy, :logger, :ecto, :httpoison]]
   end
 
   # Specifies your project dependencies
@@ -25,6 +25,10 @@ defmodule Timeline.Mixfile do
     [{:phoenix, github: "phoenixframework/phoenix"},
      {:cowboy, "~> 1.0"},
      {:postgrex, "~> 0.8.0"},
-     {:ecto, github: "elixir-lang/ecto"}]
+     {:ecto, github: "elixir-lang/ecto"},
+     {:httpoison, "~> 0.6"},
+     {:oauth2, github: "tony612/oauth2", branch: "change-plug-dep-version"},
+     {:plug, "~> 0.11.0"},
+     {:exjsx, "~> 3.1.0"}]
   end
 end
