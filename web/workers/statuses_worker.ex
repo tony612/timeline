@@ -25,7 +25,11 @@ defmodule Timeline.StatusesWorker do
     case OAuth2.AccessToken.get(token, "/1.1/statuses/user_timeline.json?#{params_str}") do
       {:ok, statuses} ->
         next_max_id = handle(statuses)
-        get_statuses(user_id, next_max_id)
+        if max_id != next_max_id do
+          get_statuses(user_id, next_max_id)
+        else
+          Logger.info "Done"
+        end
       {:error, error} ->
         Logger.info error
     end
@@ -42,7 +46,7 @@ defmodule Timeline.StatusesWorker do
     end
     # For returning max_id
     if t == [] do
-      Logger.info "Done with #{@user_id}"
+      Logger.info "Done by #{source_id}"
       source_id
     else
       handle(t)

@@ -1,6 +1,5 @@
 defmodule Timeline.Status do
   use Ecto.Model
-  @primary_key {:id, :uuid, []}
 
   schema "statuses" do
     field :text, :string
