@@ -8,6 +8,8 @@ defmodule Timeline.Status do
     field :source_id, :string
     field :posted_at, :datetime
 
+    belongs_to :user, Timeline.User
+
     timestamps
   end
 end
