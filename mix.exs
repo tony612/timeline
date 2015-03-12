@@ -30,6 +30,7 @@ defmodule Timeline.Mixfile do
      {:oauth2, github: "tony612/oauth2", branch: "change-plug-dep-version"},
      {:plug, "~> 0.11.0"},
      {:exjsx, "~> 3.1.0"},
-     {:timex, "~> 0.13.3"}]
+     {:timex, "~> 0.13.3"},
+     {:pipe, "~> 0.0.1"}]
   end
 end
