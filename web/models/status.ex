@@ -17,7 +17,7 @@ defmodule Timeline.Status do
   end
 
   def jsonable(struct) do
-    Enum.reduce [:inserted_at, :updated_at, :posted_at], struct, fn(k, s) ->
+    cleared = Enum.reduce [:inserted_at, :updated_at, :posted_at], struct, fn(k, s) ->
       case Map.get(s, k) do
         %DateTime{} = dt -> Map.put(s, k, DateTime.to_string(dt))
         dt = {date, time} ->
@@ -26,5 +26,6 @@ defmodule Timeline.Status do
         _ -> s
       end
     end
+    Map.take cleared, [:text, :source_type, :source_id, :posted_at]
   end
 end
